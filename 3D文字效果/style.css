@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	overflow: hidden;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	font-family: '黑体';
+}
+@keyframes gradient {
+	0%, 100% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+}
+#text {
+	position: relative;
+	color: #fff;
+	font-size: 7.5vw;
+	line-height: 1.3em;
+	letter-spacing: 2px;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+}
+#text p{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#text .content{
+	transform: rotate(-28deg) skew(25deg);
+	text-shadow: rgb(190, 190, 190) 0px 0px 0px, 
+				rgb(190, 180, 190) -1px 1px 0px, 
+				rgb(190, 180, 190) -2px 2px 0px, 
+				rgb(190, 180, 190) -3px 3px 0px, 
+				rgb(190, 180, 190) -4px 4px 0px, 
+				rgb(190, 180, 190) -5px 5px 0px, 
+				rgb(190, 180, 190) -6px 6px 0px, 
+				rgb(190, 180, 190) -7px 7px 0px, 
+				rgb(190, 180, 190) -8px 8px 0px, 
+				rgb(190, 180, 190) -9px 9px 0px, 
+				rgb(190, 180, 190) -10px 10px 0px, 
+				rgb(190, 180, 190) -11px 11px 0px, 
+				rgb(190, 180, 190) -12px 12px 0px, 
+				rgb(190, 180, 190) -13px 13px 0px, 
+				rgb(190, 180, 190) -14px 14px 0px, 
+				rgb(190, 180, 190) -15px 15px 0px; 
+}
+#text .content i{
+	color: #c1c90b;
+	text-shadow: rgb(217, 217, 217) 0px 0px 0px, 
+				rgb(251, 255, 163) -1px 1px 0px, 
+				rgb(251, 255, 163) -2px 2px 0px, 
+				rgb(251, 255, 163) -3px 3px 0px, 
+				rgb(251, 255, 163) -4px 4px 0px, 
+				rgb(251, 255, 163) -5px 5px 0px, 
+				rgb(251, 255, 163) -6px 6px 0px, 
+				rgb(251, 255, 163) -7px 7px 0px, 
+				rgb(251, 255, 163) -8px 8px 0px, 
+				rgb(251, 255, 163) -9px 9px 0px, 
+				rgb(251, 255, 163) -10px 10px 0px, 
+				rgb(251, 255, 163) -11px 11px 0px, 
+				rgb(251, 255, 163) -12px 12px 0px, 
+				rgb(251, 255, 163) -13px 13px 0px, 
+				rgb(251, 255, 163) -14px 14px 0px, 
+				rgb(251, 255, 163) -15px 15px 0px; 
+}
+#text .shadow {
+	transform: rotate(-28deg) skew(25deg);
+	top: 50px;
+	left: -10px;
+	color: rgba(0, 0, 0, 0.3);
+	filter: blur(5px);
+	z-index: -1;
+}
