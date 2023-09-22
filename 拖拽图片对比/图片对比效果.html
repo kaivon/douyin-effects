@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>课如一-拖拽图片对比</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 720px;
+            height: 1280px;
+            margin: 0 auto;
+
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        .imgWrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .imgWrap img{
+            position: absolute;
+            width: 100%;
+        }
+
+        .front {
+            filter: grayscale(100%); 
+        }
+        .back{
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+        }
+        .slider {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 7px;
+            height: 1280px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #c2c2c2;
+        }
+
+        .slider::-moz-range-thumb {
+            -moz-appearance: none;
+            width: 7px;
+            height: 1280px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #c2c2c2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="imgWrap">
+            <img src="img.png" class="front" alt="">
+            <img src="img.png" class="back" alt="">
+            <input type="range" min="1" max="100" value="50" class="slider" oninput="document.querySelector('.back').style.clipPath = `polygon(0 0, ${this.value}% 0, ${this.value}% 100%, 0% 100%)`" />
+        </div>
+    </div>
+</body>
+
+</html>
