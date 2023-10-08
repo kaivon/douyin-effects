@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>课如一 - 3D icon</title>
+    <style>
+        body {
+            background-color: rgb(31 41 55);
+        }
+
+        #wrap {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            color: #fff;
+            padding: 240px 15px;
+            font-size: 20px;
+            gap: 40px;
+            transform-style: preserve-3d;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            transform: rotateX(45deg) rotateZ(-15deg);
+            transform-style: preserve-3d;
+        }
+
+        ul li {
+            list-style: none;
+            display: flex;
+            transform-style: preserve-3d;
+        }
+
+        ul li a {
+            width: 60px;
+            height: 80px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        ul li:before {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: #333;
+            transform-origin: top;
+            transform: skewX(-41deg);
+        }
+
+        ul li:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 6px;
+            height: 100%;
+            background: #333;
+            transform-origin: right;
+            transform: skewY(-49deg);
+        }
+
+        ul li span {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #535353;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 30px;
+            transition: 0.5s;
+        }
+
+        ul li img {
+            width: 80%;
+        }
+
+        ul li a:hover span {
+            color: #fff;
+        }
+
+
+        ul li:hover span:nth-child(5) {
+            transform: translateZ(60px);
+            opacity: 0.9;
+        }
+
+        ul li:hover span:nth-child(4) {
+            transform: translateZ(45px);
+            opacity: 0.7;
+        }
+
+        ul li:hover span:nth-child(3) {
+            transform: translateZ(30px);
+            opacity: 0.5;
+        }
+
+        ul li:hover span:nth-child(2) {
+            transform: translateZ(15px);
+            opacity: 0.3;
+        }
+
+        ul li:hover span:nth-child(1) {
+            transform: translate(0px, 0px);
+            opacity: 0.2;
+        }
+
+        ul li:nth-child(1):hover span {
+            background: #f37335;
+        }
+
+        ul li:nth-child(2):hover span {
+            background: #29a0d3;
+        }
+
+        ul li:nth-child(3):hover span {
+            background: #59c173;
+        }
+
+        ul li:nth-child(4):hover span {
+            background: #ff9900;
+        }
+
+        ul li:nth-child(5):hover span {
+            background: red;
+        }
+
+        ul li:nth-child(6):hover span {
+            background: #8b23a5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_01.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_02.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_03.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_04.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_05.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><img src="images/logo_06.png" alt=""></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
